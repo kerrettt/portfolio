@@ -111,7 +111,7 @@ function Contact() {
       <p>You can reach me through email or GitHub.</p>
 
       <p>
-        <a href="mailto:your-email@example.com">Email me</a>
+        <a href="mailto:contact@kerrett.com">Email me</a>
       </p>
 
       <p>
