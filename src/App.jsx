@@ -61,6 +61,11 @@ function About() {
 
 function Projects() {
   const projects = [
+    {title:"LLM Router (with EPAM Systems)",
+      description: "Built an LLM routing system at EPAM Systems that dynamically selected models while retaining 98.98% of reference-model quality, using DeBERTa-based routing, semantic caching, FastAPI, Streamlit, Docker, SQLite telemetry, and automated testing.",
+      link:null,
+
+    },
     {
       title: "My Portfolio",
       description:
