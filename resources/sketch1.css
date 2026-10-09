@@ -1,0 +1,401 @@
+* {
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  min-height: 100vh;
+  color: #202020;
+  background-color: #faf9ef;
+
+  /*Making the lines*/
+  background-image:
+    linear-gradient(rgba(76, 102, 126, 0.13) 0.07rem, transparent 0.07rem),
+    linear-gradient(
+      90deg,
+      rgba(76, 102, 126, 0.13) 0.07rem,
+      transparent 0.07rem
+    );
+
+  background-size: clamp(1.6rem, 2.2vw, 2.2rem) clamp(1.6rem, 2.2vw, 2.2rem);
+}
+
+p {
+  font-size: clamp(1rem, 1.3vw, 1.4rem);
+  line-height: 1.5;
+}
+
+/*header*/
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 3%;
+  background-color: #fffef8;
+  border-bottom: 0.15rem solid #202020;
+}
+
+.terminal-title {
+  margin: 0;
+  font-family: "Cascadia Mono", monospace;
+  font-size: clamp(0.9rem, 1.3vw, 1.2rem);
+  font-weight: bold;
+}
+
+.terminal-end{
+  font-family: "Cascadia Mono", monospace;
+}
+
+/*cursor is the same*/
+.cursor {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+  width: 0.2rem;
+  height: 1em;
+  margin-left: 0.35rem;
+  background-color: #202020;
+  animation: cursoranimation 1s infinite;
+  top: 0.2em;
+}
+
+@keyframes cursoranimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.file-nav {
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 2rem);
+  flex-wrap: wrap;
+}
+
+.nav-item,
+.nav-item-active {
+  font-family: "Cascadia Mono", monospace;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  color: #777777;
+  text-decoration: none;
+}
+
+.nav-item-active {
+  color: #202020;
+  text-decoration: underline;
+  text-decoration-color: #d23333;
+  text-decoration-thickness: 0.15rem;
+  text-underline-offset: 0.3em;
+}
+
+.nav-item:hover {
+  color: #202020;
+}
+
+/*style headshot into same sort of circle from other css in nav bar, slightly different positioning*/
+#headshot {
+  width: clamp(3rem, 5vw, 5rem);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 0.15rem solid #202020;
+}
+
+/*main*/
+main {
+  width: 85%;
+  max-width: 70rem;
+  margin: clamp(2rem, 5vw, 5rem) auto;
+}
+
+/*notebook paper homesection/portfolio*/
+.portfolio-section {
+  width: 100%;
+  padding: clamp(2rem, 5vw, 5rem);
+  background-color: #fffef8;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  border-left: #d23333 solid 0.2em;
+}
+
+/*title styling*/
+.portfolio-title {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 1;
+}
+
+.home-title {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+#firstP {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+/*link styling*/
+.page-links {
+  color: #d23333;
+  font-weight: bold;
+  text-decoration: none;
+}
+.page-links:hover {
+  color: #8f3541;
+  text-decoration: underline;
+}
+
+/*footer styling*/
+
+footer {
+  display: flex;
+  padding-top: 1rem;
+  border-top: 0.3rem dotted #202020;
+  margin: 0 3rem 1rem 3rem;
+}
+
+footer img {
+  width: clamp(1.75rem, 3vw, 2.25rem);
+  aspect-ratio: 1;
+  object-fit: contain;
+  padding-right: 0.2rem;
+}
+
+/*portfolio styling*/
+.portfolio-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+
+.portfolio-main .portfolio-title {
+  grid-column: 1/3;
+  text-align: center;
+}
+
+.portfolio-intro {
+  grid-column: 1 / 3;
+}
+
+/*make projects and resume span entire page*/
+.portfolio-main .portfolio-section:nth-of-type(3),
+.portfolio-main .portfolio-section:nth-of-type(4) {
+  grid-column: 1/3;
+}
+
+.portfolio-main .portfolio-section {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background-color: #fffef8;
+  border: 0.1rem solid #cccccc;
+  border-left: 0.1rem solid #cccccc;
+  box-shadow: 0.3rem 0.3rem 0.7rem rgba(0, 0, 0, 0.2);
+}
+
+/*want a stickynote style*/
+.portfolio-main h2 {
+  display: inline-block;
+  margin-top: 0;
+  padding: 0.4rem 1rem;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  color: #202020;
+  box-shadow: 0.15rem 0.15rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-section:nth-of-type(1) h2 {
+  background-color: #fff090;
+}
+
+.portfolio-section:nth-of-type(2) h2 {
+  background-color: #bbdbf9;
+}
+
+.portfolio-section:nth-of-type(3) h2 {
+  background-color: #b3fdbe;
+}
+
+.portfolio-section:nth-of-type(4) h2 {
+  background-color: #f7b2c3;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.skill-list li {
+  padding: 0.4rem 0.8rem;
+  background-color: white;
+  border: 0.1rem solid #efefee;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.2);
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+}
+
+.portfolio-main article {
+  padding: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 1.5rem;
+  background-color: white;
+  border: 0.1rem solid #efefee;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-main article:nth-of-type(1) {
+  background-color: #fdf9e1;
+}
+
+.portfolio-main article:nth-of-type(2) {
+  background-color: #e5eaf0;
+}
+
+.portfolio-main article:nth-of-type(3) {
+  background-color: #d7e0d4;
+}
+
+.resume-embed {
+  display: block;
+  width: 100%;
+  height: clamp(30rem, 70vh, 45rem);
+  margin-top: 1.5rem;
+  border: 0.1rem solid grey;
+  background-color: white;
+}
+
+/*additional styling for activities.html*/
+
+/*had to figure out some way to restyle the portfolio-main without affecting others*/
+.portfolio-main:has(.activity-list){
+  display:flex;
+  flex-direction:column;
+  gap: clamp(2rem,4vw,4rem);
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.activity-list li{
+  padding: clamp(1rem,2vw,1.5rem);
+  background-color: #fffef8;
+  border-left: 0.25rem solid #d23333;
+  box-shadow: 0.15rem 0.15rem 0.3rem rgba(0, 0, 0, 0.2);
+}
+
+.activity-list strong{
+  color: #202020;
+  background-color: #bbdbf9;
+  padding: 0 0.2em;
+}
+
+.cat-section{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem,3vw,3rem);
+}
+
+.cat-section h2{
+  grid-column: 1/3;
+}
+
+.cat-section figure{
+  margin: 0;
+  padding: 1rem 1rem 1.5rem;
+  background-color: white;
+  border: 0.1rem solid #e5eaf0;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-bottom: .4rem solid #fff090;
+}
+
+.cat-section img{
+  display:block;
+  width:100%;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+.cat-section figcaption {
+  margin-top: 0.8rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.portfolio-main:has(.activity-list) h2{
+  display: block;
+  width: fit-content;
+  margin-top: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+#theme-switch{
+  padding: 0.7rem 1rem;
+  font-family: "Cascadia Mono", monospace;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+  cursor: pointer;
+  background-color:#fffef8;
+  color:#202020;
+  border: 0.12rem solid #202020;
+}
+
+#theme-switch:hover{
+  color:#fffef8;
+  background-color:#202020;
+}
+
+
+
+/*mobile styling*/
+
+@media (max-width: 700px){
+  header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .file-nav{
+    width: 100%;
+    gap: 0.75rem 1rem;
+  }
+
+  .portfolio-main{
+    grid-template-columns: minmax(0,1fr);
+    gap: 2rem;
+  }
+
+  .portfolio-main > *{
+    grid-column: 1;
+  }
+
+  .cat-section{
+    grid-template-columns: 1fr;
+  }
+
+  .cat-section h2{
+    grid-column: 1;
+  }
+}

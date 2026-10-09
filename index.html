@@ -1,13 +1,58 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Garrett Morris</title>
+    <link id="style-theme" rel="stylesheet" href="resources/sketch2.css">
+    <link href='https://fonts.googleapis.com/css?family=Cascadia Mono' rel='stylesheet'>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header>
+      <p class="terminal-title">PS C:/<wbr>Users/<wbr>kerrett><span class="cursor"></span></p>
+      <nav class="file-nav">
+        <a class="nav-item-active" href="index.html">/home</a>
+        <a class="nav-item" href="portfolio.html">/portfolio</a>
+        <a class="nav-item" href="activities.html">/activities</a>
+        <a class="nav-item" href="genai.html">/genai</a>
+      </nav>
+      <button id="theme-switch" type="button" onclick="switchTheme()">Switch Theme!</button>
+      <img id="headshot" src="images/headshot.png" alt="A picture of my face!">
+    </header>
+    <main> 
+      <section class="portfolio-section">
+      <h1 class="portfolio-title home-title">Hi, I'm Garrett</h1>
+        <p id="firstP">
+          I'm a Junior Computer Science Honors student @
+          <a class="page-links" href="https://www.tamu.edu" target="_blank"
+            >Texas A&M University</a
+          >
+        </p>
+        <p>
+          I'm especially interested in low-level systems and machine learning,
+          and I'm currently pursuing a career in software engineering.
+        </p>
+        <p>Check out all of my <a class="page-links" href="portfolio.html">accomplishments</a>!</p>
+        <p>
+          Or, if you're interested, see what I do in my
+          <a class="page-links" href="activities.html">free time.</a>
+        </p>
+      </section>
+    </main>
+    
+    <footer>
+      <a href="mailto:contact@kerrett.com"
+        ><img src="images/mail.png" alt="EMAIL" 
+      /></a>
+      <a href="https://www.github.com/kerrettt" target="_blank"
+        ><img src="images/github.png" alt="GITHUB" 
+      /></a>
+      <a href="https://www.linkedin.com/in/garrett--morris/" target="_blank"
+        ><img src="images/linkedin.png" alt="LINKEDIN" 
+      /></a>
+    </footer>
+    <script src="main.js"></script>
   </body>
 </html>

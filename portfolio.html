@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link id="style-theme" rel="stylesheet" href="resources/sketch2.css" />
+    <link href='https://fonts.googleapis.com/css?family=Cascadia Mono' rel='stylesheet'>
+  </head>
+  <body>
+    <header>
+      <p class="terminal-title">
+        PS C:/<wbr />Users/<wbr />kerrett/<wbr />portfolio><span
+          class="cursor"
+        ></span>
+      </p>
+      <nav class="file-nav">
+        <a class="nav-item" href="index.html">/home</a>
+        <a class="nav-item-active" href="portfolio.html">/portfolio</a>
+        <a class="nav-item" href="activities.html">/activities</a>
+        <a class="nav-item" href="genai.html">/genai</a>
+      </nav>
+      <button id="theme-switch" type="button" onclick="switchTheme()">
+        Switch Theme!
+      </button>
+    </header>
+    <main class="portfolio-main">
+      <!--starting section-->
+      <h1 class="portfolio-title">Portfolio</h1>
+      <p class="portfolio-intro">
+        Howdy! I'm a Computer Science Honors student at Texas A&M University
+        with a strong interest in artificial intelligence, machine learning,
+        low-level systems, and competitive programming.
+      </p>
+
+      <!--tech skills-->
+      <section class="portfolio-section">
+        <h2>Technical Skills</h2>
+        <h3>Programming Languages</h3>
+        <p>
+          In my day-to-day work, I use different languages depending on the type
+          of problem I'm solving. C and C++ have become especially interesting
+          to me as I learn more about systems programming in my more recent
+          courses. Python is my primary language for machine learning and
+          data-focused projects, and I have used Java, JavaScript, and C#
+          throughout my coursework and personal projects.
+        </p>
+        <ul class="skill-list">
+          <li>C++</li>
+          <li>C</li>
+          <li>Java</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>C#</li>
+        </ul>
+
+        <h3>Machine Learning & Development</h3>
+        <p>
+          Most of my experience with machine learning comes from building and
+          experimenting with whole systems and models. I have used TensorFlow
+          and Keras to build neural networks and have used tools like pandas,
+          NumPy, scikit-learn, and Matplotlib to analyze data and develop
+          predictive models.
+        </p>
+        <ul class="skill-list">
+          <li>React</li>
+          <li>TensorFlow</li>
+          <li>Keras</li>
+          <li>scikit-learn</li>
+          <li>pandas</li>
+          <li>NumPy</li>
+          <li>Matplotlib</li>
+          <li>FastAPI</li>
+        </ul>
+
+        <h3>Tools & Technologies</h3>
+        <p>
+          Throughout my coursework, internships, and personal projects, I've
+          also gained experience working with the tools that are used to build
+          out complete software systems. I have worked with numerous databases,
+          containerized applications, Linux environments, and Git-based version
+          control throughout my time programming.
+        </p>
+        <ul class="skill-list">
+          <li>Git</li>
+          <li>Linux</li>
+          <li>Docker</li>
+          <li>SQLite</li>
+          <li>PostgreSQL</li>
+          <li>Streamlit</li>
+          <li>Jupyter Notebooks</li>
+        </ul>
+      </section>
+
+      <section class="portfolio-section">
+        <h2>Technical Interests</h2>
+
+        <div>
+          <h3>AI & Machine Learning</h3>
+          <p>
+            I'm interested in building intelligent systems and have been
+            primarily focused on this area in my side projects. I particularly
+            enjoy working with neural networks and practical ML systems.
+          </p>
+        </div>
+        <div>
+          <h3>Low-Level Systems</h3>
+          <p>
+            Lately, I've been learning more about the interaction between
+            software and hardware, including memory management, computer
+            architecture, and most recently, operating systems and performance
+            optimization. As I work through these courses, I have become
+            increasingly fascinated with the intricacy of these systems and how
+            they interact.
+          </p>
+        </div>
+
+        <div>
+          <h3>Algorithms & Competitive Programming</h3>
+          <p>
+            Since high school, I've enjoyed solving competitive programming
+            problems, from sites such as USACO, Codeforces, Kattis, and
+            HackerRank, often while collaborating with friends and teammates.
+            These problems most often include dynamic programming, optimization,
+            graph algorithms, and data structures in general. Competitive
+            programming throughout my academic career has pushed me to improve
+            my understanding of these concepts while learning to approach
+            difficult and unfamiliar problems quickly.
+          </p>
+        </div>
+      </section>
+
+      <section class="portfolio-section">
+        <h2>Projects</h2>
+
+        <article>
+          <h3>S.H.A.D.E.</h3>
+          <p>
+            S.H.A.D.E. was a machine learning research project focused on
+            predicting heat index and finding days with elevated heat risk using
+            Austin's historical environmental data.
+          </p>
+          <p>
+            In this project, I built LSTM models with TensorFlow and Keras using
+            25 years of environmental data from Austin, Texas. Working with this
+            data gave me hands-on experience preparing data inputs, tuning
+            machine learning models, and evaluating them.
+          </p>
+          <p>
+            After we had tuned the models, they achieved an R<sup>2</sup> of
+            0.80 for temperature forecasting and 90.6% test accuracy for
+            heat-risk classification. More importantly, however, this project
+            taught me how important decisions made during the data
+            pre-processing phase are, as they can heavily affect the performance
+            of machine learning models.
+          </p>
+        </article>
+        <article>
+          <h3>LLM Routing System</h3>
+          <p>
+            During my internship at
+            <a class="page-links" href="https://www.epam.com" target="_blank"
+              >EPAM Systems</a
+            >, I developed an intelligent routing system that selects between
+            language models to balance response quality, inference cost, and
+            latency.
+          </p>
+          <p>
+            One of the most interesting parts of this project was learning that
+            selecting the best model is not simply a matter of choosing the most
+            capable one. While larger models may provide a stronger response,
+            they also introduce unnecessary cost and latency into the equation.
+            Because of this, the routing system that I built attempted to
+            balance quality against cost and latency when deciding which model
+            should handle a request.
+          </p>
+
+          <p>
+            While developing the system, I experimented with semantic caching,
+            prompt classification, and DeBERTa-based models while also working
+            with FastAPI, Docker, SQLite, and Streamlit. Being able to work with
+            all of these technologies together was extremely valuable to me, as
+            it gave me experience thinking about machine learning systems as a
+            whole, rather than just thinking in terms of model performance.
+          </p>
+        </article>
+        <article>
+          <h3>Mini Unix Shell</h3>
+          <p>
+            As I learn more about low-level systems in my recent courses, I have
+            become more interested than ever before in operating systems and how
+            programs interact with the OS. Sometime soon, I would like to try
+            building a miniature Unix shell in C or C++ that manages pipes,
+            process creation, command execution, and other basic shell
+            functionality. From this project, I dream of expanding even further
+            and building out my own small operating system!
+          </p>
+        </article>
+      </section>
+
+      <section class="portfolio-section">
+        <h2>Resume</h2>
+        <p>
+          <a
+            class="page-links"
+            href="resources/GarrettMorrisResume.pdf"
+            target="_blank"
+            >View Resume</a
+          >
+        </p>
+        <embed
+          src="resources/GarrettMorrisResume.pdf"
+          type="application/pdf"
+          class="resume-embed"
+        />
+      </section>
+    </main>
+    <footer>
+      <a href="mailto:contact@kerrett.com"
+        ><img src="images/mail.png" alt="EMAIL"
+      /></a>
+      <a href="https://www.github.com/kerrettt" target="_blank"
+        ><img src="images/github.png" alt="GITHUB"
+      /></a>
+      <a href="https://www.linkedin.com/in/garrett--morris/" target="_blank"
+        ><img src="images/linkedin.png" alt="LINKEDIN"
+      /></a>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
